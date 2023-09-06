@@ -16,24 +16,22 @@ AWS Account >> Launch Instances >>> Linux >>> Create security key and it downloa
 change key Permission
 
 ```
-{
-  chmod 400 xxx.pem    ## changing security key file permission
-  ssh -add "xxx.pem"  ## adding to local machine
+  chmod 400 xxx.pem    # changing security key file permission
+  ssh -add "xxx.pem"   # adding to local machine
   ssh -i xxx.pem ec2-user@public-ip
-}
 ```
 
 #### initial setups
 ```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
+  sudo dnf update -y
+  sudo dnf install mariadb105  # for SQL client 
 ```
 ### AWS RDS Instance -- Relational database
 
-
-
+- After creating RDS instance with **same VPC (Virtual Private cloud)** as of EC2 instance 
+- Having *security group* **inbound rules** as custom on port 3306 for mysql connecting from anywhere.
+```
+  mysql -h <endpoint address> -P 3306 -u admin -p
+```
 Useful Links
-https://www.knowledgehut.com/tutorials/aws
+https://www.knowledgehut.com/tutorials/aws and [youtube](https://youtu.be/qdk1p1zgBPI)
