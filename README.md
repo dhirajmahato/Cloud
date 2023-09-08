@@ -24,7 +24,20 @@ change key Permission
 #### initial setups
 ```
   sudo dnf update -y
-  sudo dnf install mariadb105  # for SQL client 
+```
+
+```
+  sudo dnf install git -y  // for git version control  
+```
+For different Servers
+```
+  sudo dnf install mariadb105-server  # for SQL **database server**
+  sudo systemctl start mariadb //Starts MariaDB service
+  sudo systemctl enable mariadb //Enabled MariaDB service to restart on reboot
+  
+  sudo dnf install -y nginx  // for **web server**
+  sudo systemctl start nginx.service
+  sudo systemctl enable nginx.service 
 ```
 ### AWS RDS Instance -- Relational database
 
@@ -34,4 +47,5 @@ change key Permission
   mysql -h <endpoint address> -P 3306 -u admin -p
 ```
 Useful Links
+https://cloudkatha.com/how-to-install-mariadb-on-amazon-linux-2023/
 https://www.knowledgehut.com/tutorials/aws and [youtube](https://youtu.be/qdk1p1zgBPI)
