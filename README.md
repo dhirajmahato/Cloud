@@ -18,23 +18,31 @@ change key Permission
 ```
   chmod 400 xxx.pem    # changing security key file permission
   ssh -add "xxx.pem"   # adding to local machine
+```
+For Secure Connection to Remotr Host
+```
   ssh -i xxx.pem ec2-user@public-ip
+```
+For Secure File transfer
+```
+  scp -i /directory/to/abc.pem /your/local/file/to/copy ec2-user@public-ip:path/to/file
 ```
 
 #### initial setups
 ```
   sudo dnf update -y
 ```
-
 ```
   sudo dnf install git -y  // for git version control  
 ```
-For different Servers
+For DB Servers
 ```
   sudo dnf install mariadb105-server  # for SQL **database server**
   sudo systemctl start mariadb //Starts MariaDB service
   sudo systemctl enable mariadb //Enabled MariaDB service to restart on reboot
-  
+```
+For Web Servers 
+```
   sudo dnf install -y nginx  // for **web server**
   sudo systemctl start nginx.service
   sudo systemctl enable nginx.service 
@@ -47,5 +55,5 @@ For different Servers
   mysql -h <endpoint address> -P 3306 -u admin -p
 ```
 Useful Links
-https://cloudkatha.com/how-to-install-mariadb-on-amazon-linux-2023/
-https://www.knowledgehut.com/tutorials/aws and [youtube](https://youtu.be/qdk1p1zgBPI)
+- https://cloudkatha.com/how-to-install-mariadb-on-amazon-linux-2023/
+- https://www.knowledgehut.com/tutorials/aws and [youtube](https://youtu.be/qdk1p1zgBPI)
