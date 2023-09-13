@@ -47,6 +47,19 @@ For Web Servers
   sudo systemctl start nginx.service
   sudo systemctl enable nginx.service 
 ```
+For kafka Servers 
+```
+  sudo yum install java-1.8.0
+  java -version
+
+  wget https://dlcdn.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+  tar -xzf kafka_2.13-3.5.0.tgz
+  bin/zookeeper-server-start.sh config/zookeeper.properties  ## zookeper
+  export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+  cd kafka_2.13-3.5.0
+  bin/kafka-server-start.sh config/server.properties    ##kafka server
+
+```
 ### AWS RDS Instance -- Relational database
 
 - After creating RDS instance with **same VPC (Virtual Private cloud)** as of EC2 instance 
