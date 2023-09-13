@@ -10,5 +10,5 @@
 ```
 3. Create requirements
 ```
-    dnf install -r requirements.txt
+    pip install -r requirements.txt
 ```
