@@ -6,7 +6,10 @@
 2. create project environment
 ```
     python3 -m venv myenv
-    python3 -m pip install --upgrade pip
+    source myenv/bin/activate
+    #check package manager pip
+    pip --version
+    python3 -m pip install --upgrade pip # if pip not installed in virtual environment
 ```
 3. Create requirements
 ```
