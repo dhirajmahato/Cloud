@@ -6,6 +6,12 @@
 2. connect with git version control directory in local directory
   ```
     git init
+    git add README.md   /  git add.  # for all files 
+    git status # to check staging area
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin git@github.com:dhirajmahato/dm_streamlit.git
+    git push -u origin main
   ```
 2. create project environment
 ```
