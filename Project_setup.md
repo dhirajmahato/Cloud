@@ -10,8 +10,8 @@
     git status # to check staging area
     git commit -m "first commit"
     git branch -M main
-    git remote add origin git@github.com:dhirajmahato/dm_streamlit.git
-    git push -u origin main
+    git remote add origin git@github.com:dhirajmahato/XXX.git      # ssh connect
+    git push -u origin main    
   ```
 2. create project environment
 ```
