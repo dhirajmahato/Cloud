@@ -11,9 +11,10 @@
 ```
     python3 -m venv myenv
     source myenv/bin/activate
-    #check package manager pip
-    pip --version
-    python3 -m pip install --upgrade pip # if pip not installed in virtual environment
+
+    check package manager **pip**
+      pip --version
+      python3 -m pip install --upgrade pip # if pip not installed in virtual environment
 ```
 3. Create requirements
 ```
