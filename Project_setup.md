@@ -3,6 +3,10 @@
     mkdir project_name
     cd project_name
   ```
+2. connect with git version control directory in local directory
+  ```
+    git init
+  ```
 2. create project environment
 ```
     python3 -m venv myenv
